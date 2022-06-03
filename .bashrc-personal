@@ -1,0 +1,50 @@
+#              _ 
+#   __ _  __ _| |
+#  / _` |/ _` | |
+# | (_| | (_| | |
+#  \__, |\__, |_|
+#     |_|   |_|  
+
+
+
+
+# skrrrr
+
+#code /home/qql/.bashrc
+#to run.     ~/.bashrc
+alias code='codium'
+alias qconf='nvim /home/qql/.config/qtile/config.py'
+alias bapconf='nvim /home/qql/.bashrc-personal'
+alias baconf='nvim ~/.bashrc'
+alias figtime='watch -n1 "date '+%D%n%T'|figlet -k"'
+alias clc='clear'
+alias nitro='nitrogen --restore'
+alias auconf='code /home/qql/.config/qtile/scripts/autostart.sh'
+#alias perosnal1 ='cp -Rf /persona/1/* ~'
+alias cale='calcurse'
+alias inzy='nvim ~/Documents/sql/inzynierka/inzynierka.md'
+alias master='zathura ~/Documents/ebookss/mastery-by-robert-greene.pdf'
+alias trening='libreoffice-calc ~/Documents/swlinux/alca.ods'
+alias vimconf='sudo nvim /etc/xdg/nvim/sysinit.vim'
+alias cdinz='cd ~/Documents/sql/inzynierka'
+alias tuto='cd ~/Documents/tutorials'
+alias lock='betterlockscreen -u ~/Pictures/shtu3tyhhme81.png -u ~/Pictures/wallhaven-r71kx7.jpg'
+alias slock='betterlockscreen -u ~/Pictures/shtu3tyhhme81.png'
+#alias joplin='/home/qql/apps/joplin/joplin.sh'
+## to nie alias, ale trzeba to potestowac i wrzucic do autostartu, bo kozak
+alias fcurs='xset r rate 250 65'
+alias scurs='xset r rate 250 35'
+alias nconf='nvim /etc/xdg/nvim/sysinit.vim'
+alias susp='systemctl suspend'
+# the terminal rickroll
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+alias ac='arduino-cli' 
+alias accom='ac compile -b arduino:avr:uno'
+alias acupl='arduino-cli upload -b arduino:avr:uno -p /dev/ttyACM0'
+alias pacz='cat /dev/ttyACM0'
+alias book='zathura /home/qql/Documents/sql/kopiadysk/ebook/The_laws_Green'
+alias cddev='cd /home/qql/Documents/tutorials/golang/freecodecamp'
+alias sl='ls'
+alias token='sudo cat /home/qql/Documents/configsandcommands/tokengit.txt'
+
+
