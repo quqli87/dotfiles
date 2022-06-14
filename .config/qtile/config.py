@@ -1,9 +1,9 @@
-#               
+#
 #   __ _  __ _| |
 #  / _` |/ _` | |
 # | (_| | (_| | |
 #  \__, |\__, |_|
-#     |_|   |_|  
+#     |_|   |_|
 
 
 
@@ -26,6 +26,8 @@
 # all copies or substantial portions of the Software.
 #
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+
+## THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
@@ -45,23 +47,19 @@ import os
 import re
 import socket
 import subprocess
-from libqtile.config import Drag, Key, Screen, Group, Drag, Click, Rule, Match 
+from libqtile.config import Drag, Key, Screen, Group, Drag, Click, Rule, Match
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from libqtile.utils import describe_attributes
 from libqtile.widget import Spacer
-
-
+              
 colours = [
     '#ffffff',
     '#000000',
     '#ddffff',
-    # '#daa520',
-    # '#ffd700',
-    # '#ffffff'
-    '#4000ff',
+    '#5F5FAF',
     '#0000ff',
-    '#00ffff'
+    '#00ffff',
     ]
 
 
@@ -293,78 +291,95 @@ layouts = [
 
 widget_defaults = dict(
     #font='sans',
-    font='scientifica',
+    font='UbuntuMono Nerd Font',
     fontsize=12,
-    padding=2,
-)
+    padding=0,
+    #background = colours[0],
+    #background = colours[0],
+    #background = colours[1],)
+    #background = '#000000')
+    )
 extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
         top=bar.Bar(
             [
-                # widget.CurrentLayout(),
-                widget.GroupBox(font='scientifica',
-                margin_y =3,
-                margin_x =2,
-                active = colours[4],
-                #inactive = colours[2],
-                foreground = colours[1],
-                background = colours[1],
+                #widget.Spacer(length=33, background="#00000000"),
+                #widget.CurrentLayout(),
+                widget.GroupBox(font='scientifica', highlight_method='text',
+                     #highlight_color['#000000','#282892']],
+                     #highlight_color[colours[1], colours[2]],
+                     margin_y =3,
+                     margin_x =2, 
+                     #inactive=colours[4],
+                     active=colours[4],
+                     foreground=colours[1],
+                     background=colours[1],
+                     ##hide_unused=True,
+                     #border='#ff3333',
+                     #block_highlight_text_color='#282893',
+                     #block_highlight_text_color=colours[2],
+                     #highlight_color=colours[0], foreground = colours[2],
+                     #background = colours[3],
                                 ),
                 widget.Prompt(),
                 widget.WindowName(),
-                
-        
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ffd2c5", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                # widget.Sep(
-                #    padding =5,
-                # ),
                 widget.CheckUpdates(
                     colour_no_updates =colours[0],
-                    colour_have_updates = colours[4
-                    
-                    
-                    
-                    ],
+                    colour_have_updates = colours[4],
                     update_interval = 300
-                    # distro = "ArcoLinux",
-                    # display_format = "{updates} Updates",
-                    # #foreground = colours[2],
-                    # mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal+ ' -e sudo pacman -Syu')},
-                    # #background = colours[4]
                        ),
-                #widget.ThermalSensor(
-                   # padding = 5,
-                   # ).
-                #widget.Volume(),
-                # widget.Pacman(
-                #     upadte_interval= 1800,
-                #     mouse_callbacks = {'Button1': open_pacman},
-
-                # ),
+                widget.TextBox(
+                         text='\uE0B2',
+                #                   #text='❰',
+                #                   #text='◀',
+                #                   text='🠴',
+                         background = colours[1],
+                         foreground = colours[3],
+                #                   margin_y=19,
+                                   padding=0,
+                                   fontsize=17
+                                   ),
+ 
+#widget.Clipboard(),
+                #widget.Backlight(),
+                #   widget.Textbox(
+                #       text='\uE0B2',
+                #             background = colours[1],
+                #             frontground = colours[3],
+                #             fontsize=13
+                #             ),
                 widget.Systray(
+                         background = colours[3],
+                         ground = colours[3],
                          icon_size=20,
-                         padding = 4
-                    
-                ),
-                # widget.Pacman(),
-                # widget.Battery(foreground=colours[5], format='{percent:2.0%} {hour:d}:{min:02d}', notify_below=0.1),
-                widget.Battery(format='{percent:2.0%} ', notify_below=0.3),
+                         padding = 0),
+                widget.TextBox(
+                         text='\uE0B2',
+                #                   #text='❰',
+                #                   #text='◀',
+                #                   text='🠴',
+                         background = colours[1],
+                         foreground = colours[4],
+                #                   margin_y=19,
+                                   padding=0,
+                                   fontsize=17
+                                   ),
+ 
+                widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
+                        padding=0,
+                background=colours[4]),
+                #foreground = colours[1]),
                 widget.TextBox("", name="default"),
-                #widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                #widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                widget.Clock(format='%Y-%m-%d %a %H:%M:%S'),
-                #widget.QuickExit(),
-                # widget.Image(
-                #     filename="/home/qql/.config/qtile/icons/barca.jpg",
-                #     #mouse_callbacks = {'Button1':open_dmenu}
-                #     ),
+                widget.Clock(format='%Y-%m-%d %a %H:%M:%S',
+                         background = colours[3]),
             ],
             22,
         ),
@@ -374,70 +389,48 @@ screens = [
             [
                #widget.CurrentLayout(),
                 widget.GroupBox(font='scientifica',
-                
-
+                     highlight_method='text',
+                    # margin_y =3,
+                    # margin_x =2,
+               # active = colours[3],
+               # foreground = colours[1],
+               # background = colours[1],
                 margin_y =3,
-                margin_x =2,
-                active = colours[4],
-                #inactive = colours[2],
-                foreground = colours[1],
-                background = colours[1],
+                margin_x =2, 
+                active=colours[0],
+                inactive=colours[1],
+                foreground=colours[3],
                                 ),
-                widget.Prompt(),
                 widget.WindowName(),
-                
-        
-                widget.Chord(
-                    chords_colors={
-                        'launch': ("#ffd2c5", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                # widget.Sep(
-                #    padding =5,
-                # ),
-                widget.CheckUpdates(
-                    colour_no_updates =colours[0],
-                    colour_have_updates = colours[3]
-                    # update_interval = 1800,
-                    # distro = "ArcoLinux",
-                    # display_format = "{updates} Updates",
-                    # #foreground = colours[2],
-                    # mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal+ ' -e sudo pacman -Syu')},
-                    # #background = colours[4]
-                       ),
-                #widget.ThermalSensor(
-                   # padding = 5,
-                   # ).
-                #widget.Volume(),
-                # widget.Pacman(
-                #     upadte_interval= 1800,
-                #     mouse_callbacks = {'Button1': open_pacman},
-
-                # ),
-                # widget.Systray(
-                #          icon_size=20,
-                #          padding = 4
-                #     
-                # ),
-                # widget.Pacman(),
-                # widget.Battery(foreground=colours[5], format='{percent:2.0%} {hour:d}:{min:02d}', notify_below=0.1),
-                widget.Battery(format='{percent:2.0%} ', notify_below=0.3),
+                # widget.CheckUpdates(
+                #     colour_no_updates =colours[0],
+                #     colour_have_updates = colours[3]
+                #        ),
+                widget.TextBox(
+                    #    margin_y =3,
+                    #    margin_x =2,
+                    #text='❰',
+                    #text='kurwa',
+                    background = colours[1],
+                    foreground = colours[3],
+                    padding=0,
+                    fontsize=10
+                    ),
+                widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
+                         #margin_y =28,
+                    margin_y =3,
+                    margin_x =2,
+                    background = colours[3],
+                    foreground = colours[1],
+                     ),
                 widget.TextBox("", name="default"),
-                #widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                #widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
+                #widget.TextBox("", foreground="#d75f5f"),
                 widget.Clock(format='%Y-%m-%d %a %H:%M:%S'),
-                #widget.QuickExit(),
-                # widget.Image(
-                #     filename="/home/qql/.config/qtile/icons/barca.jpg",
-                #     #mouse_callbacks = {'Button1':open_dmenu}
-                #     ),
             ],
             22,
         ),
     ),
 ]
-
 
 # Drag floating layouts.
 mouse = [
@@ -468,6 +461,7 @@ def assign_app_group(client):
      d[group_names[2]] = ['Alacritty'] 
      d[group_names[3]] = ['thunar'] 
      d[group_names[4]] = ['joplin'] 
+     d[group_names[5]] = ['virt-manager', 'VirtualBox Manager']
      d[group_names[6]] = ['vscodium','rstudio', 'Fritzing','notepadqq-bin']
      d[group_names[7]] = ['caprine', 'signal']
      d[group_names[8]]=['superproductivity']
