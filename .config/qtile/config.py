@@ -36,7 +36,6 @@
 # SOFTWARE.
 
 from typing import List  # noqa: F401
-
 # from libqtile import bar, layout, widget
 # from libqtile.config import Click, Drag, Group, Key, Match, Screen
 # from libqtile.lazy import lazy
@@ -62,9 +61,7 @@ colours = [
     '#00ffff',
     ]
 
-
 mod = "mod4"
-#mod = "mod4"
 #mod1 = "control"
 #terminal = guess_terminal()
 #terminal = 'urxvt'
@@ -294,10 +291,6 @@ widget_defaults = dict(
     font='UbuntuMono Nerd Font',
     fontsize=12,
     padding=0,
-    #background = colours[0],
-    #background = colours[0],
-    #background = colours[1],)
-    #background = '#000000')
     )
 extension_defaults = widget_defaults.copy()
 
@@ -305,26 +298,20 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                #widget.Spacer(length=33, background="#00000000"),
                 #widget.CurrentLayout(),
-                widget.GroupBox(font='scientifica', highlight_method='text',
-                     #highlight_color['#000000','#282892']],
-                     #highlight_color[colours[1], colours[2]],
+                widget.GroupBox(font='scientifica', highlight_method='line',
+                     highlight_color=[colours[1], colours[5]],
                      margin_y =3,
                      margin_x =2, 
                      #inactive=colours[4],
-                     active=colours[4],
                      foreground=colours[1],
+                     active=colours[5],
                      background=colours[1],
-                     ##hide_unused=True,
-                     #border='#ff3333',
-                     #block_highlight_text_color='#282893',
-                     #block_highlight_text_color=colours[2],
-                     #highlight_color=colours[0], foreground = colours[2],
-                     #background = colours[3],
                                 ),
                 widget.Prompt(),
-                widget.WindowName(),
+                #widget.Sep(),
+                widget.WindowName(
+                    padding_x=9),
                 widget.Chord(
                     chords_colors={
                         'launch': ("#ffd2c5", "#ffffff"),
@@ -358,9 +345,69 @@ screens = [
                 #             ),
                 widget.Systray(
                          background = colours[3],
-                         ground = colours[3],
+                         foreground = colours[4],
                          icon_size=20,
                          padding = 0),
+                widget.TextBox(
+                         text='\uE0B2',
+                #                   #text='❰',
+                #                   #text='◀',
+                #                   text='🠴',
+                         background = colours[3],
+                         foreground = colours[4],
+                #                   margin_y=19,
+                         padding=0,
+                         fontsize=17
+                                   ),
+ 
+                widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
+                        padding=0,
+                        background=colours[4]),
+                #foreground = colours[1]),
+                widget.TextBox(
+                         text='\uE0B2',
+                         background = colours[4],
+                         foreground = colours[3],
+                         fontsize=17),
+                widget.Clock(format='%Y-%m-%d %a %H:%M:%S',
+                         background = colours[3]),
+            ],
+            22,
+        ),
+    ),
+     Screen(
+        top=bar.Bar(
+            [
+                #widget.Spacer(length=33, background="#00000000"),
+                #widget.CurrentLayout(),
+                widget.GroupBox(font='scientifica', highlight_method='line',
+                     highlight_color=[colours[1], colours[5]],
+                     margin_y =3,
+                     margin_x =2, 
+                     #inactive=colours[4],
+                     active=colours[5],
+                     foreground=colours[1],
+                     background=colours[1],
+                     ##hide_unused=True,
+                     #border='#ff3333',
+                     #block_highlight_text_color='#282893',
+                     #block_highlight_text_color=colours[2],
+                     #highlight_color=colours[0], foreground = colours[2],
+                     #background = colours[3],
+                                ),
+                widget.Prompt(),
+                widget.WindowName(),
+                widget.Chord(
+                    chords_colors={
+                        'launch': ("#ffd2c5", "#ffffff"),
+                    },
+                    name_transform=lambda name: name.upper(),
+                ),
+                widget.CheckUpdates(
+                    colour_no_updates =colours[0],
+                    colour_have_updates = colours[4],
+                    update_interval = 300
+                       ),
                 widget.TextBox(
                          text='\uE0B2',
                 #                   #text='❰',
@@ -373,63 +420,92 @@ screens = [
                                    fontsize=17
                                    ),
  
+#widget.Clipboard(),
+                #widget.Backlight(),
+                #   widget.Textbox(
+                #       text='\uE0B2',
+                #             background = colours[1],
+                #             frontground = colours[3],
+                #             fontsize=13
+                #             ),
+                #widget.Systray(
+                #         background = colours[3],
+                #         foreground = colours[4],
+                #         icon_size=20,
+                #         padding = 0),
+                #widget.TextBox(
+                #         text='\uE0B2',
+                #                   #text='❰',
+                #                   #text='◀',
+                #                   text='🠴',
+                #         background = colours[3],
+                #         foreground = colours[4],
+                #                   margin_y=19,
+                #         padding=0,
+                #         fontsize=17
+                #                   ),
+ 
                 widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
                         padding=0,
-                background=colours[4]),
+                        background=colours[4]),
                 #foreground = colours[1]),
-                widget.TextBox("", name="default"),
+                widget.TextBox(
+                         text='\uE0B2',
+                         background = colours[4],
+                         foreground = colours[3],
+                         fontsize=17),
                 widget.Clock(format='%Y-%m-%d %a %H:%M:%S',
                          background = colours[3]),
             ],
             22,
         ),
     ),
-    Screen(
-        top=bar.Bar(
-            [
-               #widget.CurrentLayout(),
-                widget.GroupBox(font='scientifica',
-                     highlight_method='text',
-                    # margin_y =3,
-                    # margin_x =2,
-               # active = colours[3],
-               # foreground = colours[1],
-               # background = colours[1],
-                margin_y =3,
-                margin_x =2, 
-                active=colours[0],
-                inactive=colours[1],
-                foreground=colours[3],
-                                ),
-                widget.WindowName(),
-                # widget.CheckUpdates(
-                #     colour_no_updates =colours[0],
-                #     colour_have_updates = colours[3]
-                #        ),
-                widget.TextBox(
-                    #    margin_y =3,
-                    #    margin_x =2,
-                    #text='❰',
-                    #text='kurwa',
-                    background = colours[1],
-                    foreground = colours[3],
-                    padding=0,
-                    fontsize=10
-                    ),
-                widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
-                         #margin_y =28,
-                    margin_y =3,
-                    margin_x =2,
-                    background = colours[3],
-                    foreground = colours[1],
-                     ),
-                widget.TextBox("", name="default"),
-                #widget.TextBox("", foreground="#d75f5f"),
-                widget.Clock(format='%Y-%m-%d %a %H:%M:%S'),
-            ],
-            22,
-        ),
-    ),
+ #   Screen(
+ #       top=bar.Bar(
+ #           [
+ #              #widget.CurrentLayout(),
+ #               widget.GroupBox(font='scientifica',
+ #                    highlight_method='text',
+ #                   # margin_y =3,
+ #                   # margin_x =2,
+ #              # active = colours[3],
+ #              # foreground = colours[1],
+ #              # background = colours[1],
+ #               margin_y =3,
+ #               margin_x =2, 
+ #               active=colours[0],
+ #               inactive=colours[1],
+ #               foreground=colours[3],
+ #                               ),
+ #               widget.WindowName(),
+ #               # widget.CheckUpdates(
+ #               #     colour_no_updates =colours[0],
+ #               #     colour_have_updates = colours[3]
+ #               #        ),
+ #               widget.TextBox(
+ #                   #    margin_y =3,
+ #                   #    margin_x =2,
+ #                   #text='❰',
+ #                   #text='kurwa',
+ #                   background = colours[1],
+ #                   foreground = colours[3],
+ #                   padding=0,
+ #                   fontsize=10
+ #                   ),
+ #               widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
+ #                        #margin_y =28,
+ #                   margin_y =3,
+ #                   margin_x =2,
+ #                   background = colours[3],
+ #                   foreground = colours[1],
+ #                    ),
+ #               widget.TextBox("", name="default"),
+ #               #widget.TextBox("", foreground="#d75f5f"),
+ #               widget.Clock(format='%Y-%m-%d %a %H:%M:%S'),
+ #           ],
+ #           22,
+ #       ),
+ #   ),
 ]
 
 # Drag floating layouts.
