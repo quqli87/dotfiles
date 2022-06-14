@@ -198,6 +198,8 @@ groups=[]
 group_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0",]
 # group_labels = ['あ','い','う','え','お','か','き','く','け','人',]
 group_labels = ['不','了','人','え','之','大','个','小','中','从',]
+#group_labels = ['😻','🕮','🫀','😻','😍','♡','个','小','中','🎧',]
+#🎵
 group_layouts = ["MonadTall", "MonadTall","MonadTall", "MonadTall","MonadTall", "MonadTall","MonadTall", "MonadTall","MonadTall", "MonadTall",]
 # group_layouts = ["Columns","Matrix","MonadTall","MonadWide","Columns","Matrix","MonadTall","MonadWid1e",["Columns","Matrix",]
     # layout.Columns(border_focus_stack='#00005a',border_focus= colours[3]),
@@ -303,13 +305,11 @@ screens = [
                      highlight_color=[colours[1], colours[5]],
                      margin_y =3,
                      margin_x =2, 
-                     #inactive=colours[4],
                      foreground=colours[1],
                      active=colours[5],
                      background=colours[1],
                                 ),
                 widget.Prompt(),
-                #widget.Sep(),
                 widget.WindowName(
                     padding_x=9),
                 widget.Chord(
@@ -320,23 +320,22 @@ screens = [
                 ),
                 widget.CheckUpdates(
                     colour_no_updates =colours[0],
-                    colour_have_updates = colours[4],
+                    colour_have_updates = colours[3],
                     update_interval = 300
                        ),
                 widget.TextBox(
                          text='\uE0B2',
-                #                   #text='❰',
+                #,                   #text='❰',
+
                 #                   #text='◀',
                 #                   text='🠴',
                          background = colours[1],
                          foreground = colours[3],
-                #                   margin_y=19,
-                                   padding=0,
-                                   fontsize=17
+                         padding=0,
+                         fontsize=17
                                    ),
  
 #widget.Clipboard(),
-                #widget.Backlight(),
                 #   widget.Textbox(
                 #       text='\uE0B2',
                 #             background = colours[1],
@@ -460,52 +459,6 @@ screens = [
             22,
         ),
     ),
- #   Screen(
- #       top=bar.Bar(
- #           [
- #              #widget.CurrentLayout(),
- #               widget.GroupBox(font='scientifica',
- #                    highlight_method='text',
- #                   # margin_y =3,
- #                   # margin_x =2,
- #              # active = colours[3],
- #              # foreground = colours[1],
- #              # background = colours[1],
- #               margin_y =3,
- #               margin_x =2, 
- #               active=colours[0],
- #               inactive=colours[1],
- #               foreground=colours[3],
- #                               ),
- #               widget.WindowName(),
- #               # widget.CheckUpdates(
- #               #     colour_no_updates =colours[0],
- #               #     colour_have_updates = colours[3]
- #               #        ),
- #               widget.TextBox(
- #                   #    margin_y =3,
- #                   #    margin_x =2,
- #                   #text='❰',
- #                   #text='kurwa',
- #                   background = colours[1],
- #                   foreground = colours[3],
- #                   padding=0,
- #                   fontsize=10
- #                   ),
- #               widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
- #                        #margin_y =28,
- #                   margin_y =3,
- #                   margin_x =2,
- #                   background = colours[3],
- #                   foreground = colours[1],
- #                    ),
- #               widget.TextBox("", name="default"),
- #               #widget.TextBox("", foreground="#d75f5f"),
- #               widget.Clock(format='%Y-%m-%d %a %H:%M:%S'),
- #           ],
- #           22,
- #       ),
- #   ),
 ]
 
 # Drag floating layouts.
