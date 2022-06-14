@@ -14,6 +14,8 @@
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export PATH=$PATH:/etc/xdg/nvim/autoload/vim-go
+export PATH=$PATH:/home/qql/Documents/configsandcommands
+
 export PATH=$PATH:/usr/local/go/bin
 export GOROOT="/usr/local/go"
 #export GOROOT="/usr/local/go"

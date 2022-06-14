@@ -28,8 +28,9 @@ alias trening='libreoffice-calc ~/Documents/swlinux/alca.ods'
 alias vimconf='sudo nvim /etc/xdg/nvim/sysinit.vim'
 alias cdinz='cd ~/Documents/sql/inzynierka'
 alias tuto='cd ~/Documents/tutorials'
-alias lock='betterlockscreen -u ~/Pictures/shtu3tyhhme81.png -u ~/Pictures/wallhaven-r71kx7.jpg'
-alias slock='betterlockscreen -u ~/Pictures/shtu3tyhhme81.png'
+alias lock='betterlockscreen -u ~/Pictures/dracula_mac_wallpaper.png -u ~/Pictures/wallhaven-r71kx7.jpg'
+alias slock='betterlockscreen -u ~/Pictures/dracula_mac_wallpaper.png'
+#alias slock='betterlockscreen -u ~/Pictures/dracula_mac.wallpaper.png 
 #alias joplin='/home/qql/apps/joplin/joplin.sh'
 ## to nie alias, ale trzeba to potestowac i wrzucic do autostartu, bo kozak
 alias fcurs='xset r rate 250 65'
@@ -46,5 +47,5 @@ alias book='zathura /home/qql/Documents/sql/kopiadysk/ebook/The_laws_Green'
 alias cddev='cd /home/qql/Documents/tutorials/golang/freecodecamp'
 alias sl='ls'
 alias token='sudo cat /home/qql/Documents/configsandcommands/tokengit.txt'
-
+alias tconf='nvim ~/.config/tmux/tmux.conf'
 

@@ -56,9 +56,12 @@ colours = [
     '#ffffff',
     '#000000',
     '#ddffff',
-    '#5F5FAF',
+    #'#5F5FAF',
+    '#303343',
     '#0000ff',
-    '#00ffff',
+    '#90d0e8',
+    #'#00ffff'
+    
     ]
 
 mod = "mod4"
@@ -344,7 +347,7 @@ screens = [
                 #             ),
                 widget.Systray(
                          background = colours[3],
-                         foreground = colours[4],
+                         foreground = colours[5],
                          icon_size=20,
                          padding = 0),
                 widget.TextBox(
@@ -353,7 +356,7 @@ screens = [
                 #                   #text='◀',
                 #                   text='🠴',
                          background = colours[3],
-                         foreground = colours[4],
+                         foreground = colours[5],
                 #                   margin_y=19,
                          padding=0,
                          fontsize=17
@@ -361,11 +364,11 @@ screens = [
  
                 widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
                         padding=0,
-                        background=colours[4]),
+                        background=colours[5]),
                 #foreground = colours[1]),
                 widget.TextBox(
                          text='\uE0B2',
-                         background = colours[4],
+                         background = colours[5],
                          foreground = colours[3],
                          fontsize=17),
                 widget.Clock(format='%Y-%m-%d %a %H:%M:%S',
@@ -377,22 +380,14 @@ screens = [
      Screen(
         top=bar.Bar(
             [
-                #widget.Spacer(length=33, background="#00000000"),
                 #widget.CurrentLayout(),
                 widget.GroupBox(font='scientifica', highlight_method='line',
                      highlight_color=[colours[1], colours[5]],
                      margin_y =3,
                      margin_x =2, 
-                     #inactive=colours[4],
                      active=colours[5],
                      foreground=colours[1],
                      background=colours[1],
-                     ##hide_unused=True,
-                     #border='#ff3333',
-                     #block_highlight_text_color='#282893',
-                     #block_highlight_text_color=colours[2],
-                     #highlight_color=colours[0], foreground = colours[2],
-                     #background = colours[3],
                                 ),
                 widget.Prompt(),
                 widget.WindowName(),
@@ -404,7 +399,7 @@ screens = [
                 ),
                 widget.CheckUpdates(
                     colour_no_updates =colours[0],
-                    colour_have_updates = colours[4],
+                    colour_have_updates = colours[5],
                     update_interval = 300
                        ),
                 widget.TextBox(
@@ -413,44 +408,20 @@ screens = [
                 #                   #text='◀',
                 #                   text='🠴',
                          background = colours[1],
-                         foreground = colours[4],
+                         foreground = colours[5],
                 #                   margin_y=19,
                                    padding=0,
                                    fontsize=17
                                    ),
  
-#widget.Clipboard(),
-                #widget.Backlight(),
-                #   widget.Textbox(
-                #       text='\uE0B2',
-                #             background = colours[1],
-                #             frontground = colours[3],
-                #             fontsize=13
-                #             ),
-                #widget.Systray(
-                #         background = colours[3],
-                #         foreground = colours[4],
-                #         icon_size=20,
-                #         padding = 0),
-                #widget.TextBox(
-                #         text='\uE0B2',
-                #                   #text='❰',
-                #                   #text='◀',
-                #                   text='🠴',
-                #         background = colours[3],
-                #         foreground = colours[4],
-                #                   margin_y=19,
-                #         padding=0,
-                #         fontsize=17
-                #                   ),
- 
+
                 widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
                         padding=0,
-                        background=colours[4]),
+                        background=colours[5]),
                 #foreground = colours[1]),
                 widget.TextBox(
                          text='\uE0B2',
-                         background = colours[4],
+                         background = colours[5],
                          foreground = colours[3],
                          fontsize=17),
                 widget.Clock(format='%Y-%m-%d %a %H:%M:%S',
