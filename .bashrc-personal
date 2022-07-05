@@ -43,9 +43,14 @@ alias ac='arduino-cli'
 alias accom='ac compile -b arduino:avr:uno'
 alias acupl='arduino-cli upload -b arduino:avr:uno -p /dev/ttyACM0'
 alias pacz='cat /dev/ttyACM0'
-alias book='zathura /home/qql/Documents/sql/kopiadysk/ebook/The_laws_Green'
+alias book='zathura /home/qql/Documents/ebookss/1584853178_the-art-of-seduction-robert-greene.pdf'
 alias cddev='cd /home/qql/Documents/tutorials/golang/freecodecamp'
 alias sl='ls'
 alias token='sudo cat /home/qql/Documents/configsandcommands/tokengit.txt'
 alias tconf='nvim ~/.config/tmux/tmux.conf'
+alias cdobr='cd ~/Documents/sql/inzynierka/obrona'
+alias oprobr='nvim ~/Documents/sql/inzynierka/obrona/PYTANIA-OBRONA.md'
+alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
+alias svn="svn --config-dir \"$XDG_CONFIG_HOME\"/subversion"
+#alias prezka='DesktopEditors ~/Documents/sql/inzynierka/obrona/KarolKulis297116.pptx' nie dzila, tutaj akurat nazwa zla powinno byc onlyoffice-desktopeditors ale i tak to by nic nie dalo bo to jakos przepakowane jest z deb na archa niezbyt dobrze
 

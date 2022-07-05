@@ -150,7 +150,7 @@ columns: 2;
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
-@import "/usr/share/rofi/themes/Arc-Dark-Havelock-transparent.rasi"
+//@import "/usr/share/rofi/themes/Arc-Dark-Havelock-transparent.rasi"
 //@theme "/usr/share/rofi/themes/Arc-Dark-Tory-transparent.rasi"
 //@theme "/usr/share/rofi/themes/sidebar.rasi"
 //@theme "/usr/share/rofi/themes/Arc-Tory-transparent.rasi"

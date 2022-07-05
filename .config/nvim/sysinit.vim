@@ -49,6 +49,8 @@ call plug#end()
 "colorscheme peachpuff
 colorscheme dracula
 highlight Normal guibg=none
+autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
+autocmd BufRead,BufNewFile ~/.calcurse/nites/* set filetype=markdown
 
 
 let g:go_bin_path = $HOME."/go/bin"

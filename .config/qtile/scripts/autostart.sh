@@ -53,9 +53,9 @@ picom --config $HOME/.config/qtile/scripts/picom.conf &
 
 run volumeicon &
 #run discord &
+redshift &
 nitrogen --restore &
 timedatectl set-ntp true
-
 
 #run caffeine -a &
 #run vivaldi-stable &

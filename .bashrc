@@ -11,6 +11,18 @@
 #export XMODIFIERS=@im=dbus
 #export QT_IM_MODULE=ibus
 #export PATH=$PATH:$(go env GOPATH)/bin
+
+### trying to cleanup my home dir 
+#monerod --data-dir "$XDG_DATA_HOME"/bitmonero 
+export OCTAVE_HISTFILE="$XDG_CACHE_HOME/octave-hsts" 
+export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME/octave/octaverc"
+export ZDOTDIR="$HOME/.config/zsh"
+export LESSHISTFILE="-"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
+
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export PATH=$PATH:/etc/xdg/nvim/autoload/vim-go
