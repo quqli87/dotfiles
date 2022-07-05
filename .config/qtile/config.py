@@ -1,10 +1,15 @@
-#
-#   __ _  __ _| |
-#  / _` |/ _` | |
-# | (_| | (_| | |
-#  \__, |\__, |_|
-#     |_|   |_|
-
+#                     _   _   _                           _           
+# _ __   ___  _ __ __| | | |_| |__   ___ _ __ ___   ___  | |__  _   _ 
+#| '_ \ / _ \| '__/ _` | | __| '_ \ / _ \ '_ ` _ \ / _ \ | '_ \| | | |
+#| | | | (_) | | | (_| | | |_| | | |  __/ | | | | |  __/ | |_) | |_| |
+#|_| |_|\___/|_|  \__,_|  \__|_| |_|\___|_| |_| |_|\___| |_.__/ \__, |
+#                                                               |___/ 
+#             _ 
+#  __ _  __ _| |
+# / _` |/ _` | |
+#| (_| | (_| | |
+# \__, |\__, |_|
+#    |_|   |_|                                                        #
 
 
 # Copyright (c) 2010 Aldo Cortesi
@@ -255,8 +260,8 @@ def init_layout_theme():
 layout_theme = init_layout_theme()
 layouts = [
     layout.Max(**layout_theme),
-    layout.MonadTall(margin=6, border_width=1, border_focus=colours[3], border_normal="#550055"),
-    layout.MonadWide(margin=6, border_width=1, border_focus=colours[3], border_normal="#4c566a"),
+    layout.MonadTall(margin=6, border_width=1, border_focus=colours[5], border_normal=colours[3]),
+    layout.MonadWide(margin=6, border_width=1, border_focus=colours[5], border_normal=colours[3]),
     layout.Matrix(**layout_theme),
     # layout.Bsp(**layout_theme),
     # layout.Floating(**layout_theme),
@@ -323,7 +328,7 @@ screens = [
                 ),
                 widget.CheckUpdates(
                     colour_no_updates =colours[0],
-                    colour_have_updates = colours[3],
+                    colour_have_updates = colours[5],
                     update_interval = 300
                        ),
                 widget.TextBox(
@@ -457,7 +462,7 @@ def assign_app_group(client):
      #####################################################################################
      
      d[group_names[0]] = ['brave-browser', 'Navigator']
-     d[group_names[1]] = ['fluent-reader', 'org.pwmt.zathura']
+     d[group_names[1]] = ['fluent-reader', 'org.pwmt.zathura', 'okular','DesktopEditors']
      d[group_names[2]] = ['Alacritty'] 
      d[group_names[3]] = ['thunar'] 
      d[group_names[4]] = ['joplin'] 
@@ -465,10 +470,7 @@ def assign_app_group(client):
      d[group_names[6]] = ['vscodium','rstudio', 'Fritzing','notepadqq-bin']
      d[group_names[7]] = ['caprine', 'signal']
      d[group_names[8]]=['superproductivity']
-     d[group_names[9]] = ['com.rafaelmardojai.Blanket', 'crx_cinhimbnkkaeohfgghhklpknlkffjgod','crx_eikjhbkpemdappjfcmdeeeamdpkgabmk']
-     # d[group_names[2]] = ['brave', 'librewolf']
-     #d[group_names[2]] = ['alacritty'] 
-     #d[group_names[2]] = [terminal] 
+     d[group_names[9]] = ['com.rafaelmardojai.Blanket', 'crx_cinhimbnkkaeohfgghhklpknlkffjgod','crx_eikjhbkpemdappjfcmdeeeamdpkgabmk','deadbeef','pavucontrol','blueberry.py']
      wm_class = client.window.get_wm_class()[0]
 
      for i in range(len(d)):
@@ -497,3 +499,21 @@ auto_fullscreen = True
 focus_on_window_activation = "smart"
 #wmname = "LG3D"
 wmname = "qql"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
