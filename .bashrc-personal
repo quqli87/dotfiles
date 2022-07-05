@@ -35,7 +35,7 @@ alias slock='betterlockscreen -u ~/Pictures/dracula_mac_wallpaper.png'
 ## to nie alias, ale trzeba to potestowac i wrzucic do autostartu, bo kozak
 alias fcurs='xset r rate 250 65'
 alias scurs='xset r rate 250 35'
-alias nconf='nvim /etc/xdg/nvim/sysinit.vim'
+alias nconf='nvim ~/.config/nvim/sysinit.vim'
 alias susp='systemctl suspend'
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
