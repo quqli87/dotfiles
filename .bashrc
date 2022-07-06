@@ -25,7 +25,7 @@ export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 
 export GOPATH=$HOME/code/go
 export GOBIN=$HOME/code/go/bin
-export PATH=$PATH:/.config/nvim/autoload/vim-go
+export PATH=$PATH:~/.config/nvim/autoload/vim-go
 #export PATH=$PATH:/etc/xdg/nvim/autoload/vim-go
 export PATH=$PATH:/home/qql/Documents/configsandcommands
 
