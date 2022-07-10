@@ -25,7 +25,7 @@ alias cale='calcurse'
 alias inzy='nvim ~/Documents/sql/inzynierka/inzynierka.md'
 alias master='zathura ~/Documents/ebookss/mastery-by-robert-greene.pdf'
 alias trening='libreoffice-calc ~/Documents/swlinux/alca.ods'
-alias vimconf='sudo nvim /etc/xdg/nvim/sysinit.vim'
+alias vimconf='sudo nvim /etc/xdg/nvim/init.vim'
 alias cdinz='cd ~/Documents/sql/inzynierka'
 alias tuto='cd ~/Documents/tutorials'
 alias lock='betterlockscreen -u ~/Pictures/dracula_mac_wallpaper.png -u ~/Pictures/wallhaven-r71kx7.jpg'
@@ -35,7 +35,7 @@ alias slock='betterlockscreen -u ~/Pictures/dracula_mac_wallpaper.png'
 ## to nie alias, ale trzeba to potestowac i wrzucic do autostartu, bo kozak
 alias fcurs='xset r rate 250 65'
 alias scurs='xset r rate 250 35'
-alias nconf='nvim ~/.config/nvim/sysinit.vim'
+alias nconf='nvim ~/.config/nvim/init.vim'
 alias susp='systemctl suspend'
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
@@ -52,5 +52,6 @@ alias cdobr='cd ~/Documents/sql/inzynierka/obrona'
 alias oprobr='nvim ~/Documents/sql/inzynierka/obrona/PYTANIA-OBRONA.md'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias svn="svn --config-dir \"$XDG_CONFIG_HOME\"/subversion"
+alias cdeb="cd ~/Documents/ebookss"
 #alias prezka='DesktopEditors ~/Documents/sql/inzynierka/obrona/KarolKulis297116.pptx' nie dzila, tutaj akurat nazwa zla powinno byc onlyoffice-desktopeditors ale i tak to by nic nie dalo bo to jakos przepakowane jest z deb na archa niezbyt dobrze
 
