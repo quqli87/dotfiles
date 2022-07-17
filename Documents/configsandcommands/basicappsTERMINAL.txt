@@ -1,0 +1,7 @@
+ranger
+rofi
+alacritty
+neovim
+git
+tmux
+youtube-dl
