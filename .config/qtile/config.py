@@ -66,6 +66,7 @@ colours = [
     '#0000ff',
     '#90d0e8',
     #'#00ffff'
+    '#000000ff'
     
     ]
 
@@ -133,34 +134,35 @@ keys = [
 
 # CHANGE FOCUS
 
-Key([mod], "Up", lazy.layout.up()),
-    Key([mod], "Down", lazy.layout.down()),
-    #Key([mod], "Left", lazy.layout.left()),
-    #Key([mod], "Right", lazy.layout.right()),
+    Key([mod], "k", lazy.layout.up()),
+    Key([mod], "j", lazy.layout.down()),
+    Key([mod], "l", lazy.layout.right()),
+    Key([mod], "h", lazy.layout.left()),
+    Key([mod], "n",lazy.next_screen()),
 
 # RESIZE UP, DOWN, LEFT, RIGHT
   
-    Key([mod, "control"], "Right",
+    Key([mod, "control"], "l",
         lazy.layout.grow_right(),
         lazy.layout.grow(),
         lazy.layout.increase_ratio(),
         lazy.layout.delete(),
         ),
 
-    Key([mod, "control"], "Left",
+    Key([mod, "control"], "h",
         lazy.layout.grow_left(),
         lazy.layout.shrink(),
         lazy.layout.decrease_ratio(),
         lazy.layout.add(),
         ),
    
-    Key([mod, "control"], "Up",
+    Key([mod, "control"], "k",
         lazy.layout.grow_up(),
         lazy.layout.grow(),
         lazy.layout.decrease_nmaster(),
         ),
 
-    Key([mod, "control"], "Down",
+    Key([mod, "control"], "j",
         lazy.layout.grow_down(),
         lazy.layout.shrink(),
         lazy.layout.increase_nmaster(),
@@ -240,8 +242,8 @@ for i in groups:
 
 #CHANGE WORKSPACES
         Key([mod], i.name, lazy.group[i.name].toscreen()),
-        Key([mod], "Right", lazy.screen.next_group()),
-        Key([mod], "Left", lazy.screen.prev_group()),
+       # Key([mod], "Right", lazy.screen.next_group()),
+       # Key([mod], "Left", lazy.screen.prev_group()),
        # Key(["mod1", "shift"], "Tab", lazy.screen.next_group()),
        # Key(["mod1", "shift"], "Tab", lazy.screen.prev_group()),
 
@@ -301,6 +303,8 @@ widget_defaults = dict(
     font='UbuntuMono Nerd Font',
     fontsize=12,
     padding=0,
+    background=colours[6],
+    opacity=1,
     )
 extension_defaults = widget_defaults.copy()
 
@@ -389,15 +393,13 @@ screens = [
                 widget.GroupBox(font='scientifica', highlight_method='line',
                      highlight_color=[colours[1], colours[5]],
                      margin_y =3,
-                     margin_x =2, 
+                     margin_x =3, 
                      active=colours[5],
-                     foreground=colours[1],
-                     background=colours[1],
-                                ),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
+                     foreground=colours[2],
+                     #background="#ff0000.0", opacity=1
+                     background=colours[6],
+                               ),
+                widget.Prompt(), widget.WindowName(), widget.Chord( chords_colors={
                         'launch': ("#ffd2c5", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
@@ -408,13 +410,12 @@ screens = [
                     update_interval = 300
                        ),
                 widget.TextBox(
-                         text='\uE0B2',
-                #                   #text='❰',
-                #                   #text='◀',
-                #                   text='🠴',
-                         background = colours[1],
-                         foreground = colours[5],
-                #                   margin_y=19,
+                           text='\uE0B2',
+                                   #text='❰',
+                                   #text='◀',
+                                   #text='🠴',
+                                   foreground = colours[5],
+                                   margin_y=19,
                                    padding=0,
                                    fontsize=17
                                    ),
@@ -422,15 +423,15 @@ screens = [
 
                 widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
                         padding=0,
-                        background=colours[5]),
-                #foreground = colours[1]),
+                        background=colours[5],
+                        foreground = colours[3]),
                 widget.TextBox(
-                         text='\uE0B2',
-                         background = colours[5],
-                         foreground = colours[3],
-                         fontsize=17),
+                            text='\uE0B2',
+                            background = colours[5],
+                            foreground = colours[3],
+                            fontsize=17),
                 widget.Clock(format='%Y-%m-%d %a %H:%M:%S',
-                         background = colours[3]),
+                    background = colours[3]),
             ],
             22,
         ),
@@ -462,11 +463,11 @@ def assign_app_group(client):
      #####################################################################################
      
      d[group_names[0]] = ['brave-browser', 'Navigator']
-     d[group_names[1]] = ['fluent-reader', 'org.pwmt.zathura', 'okular','DesktopEditors']
+     d[group_names[1]] = ['fluent-reader', 'org.pwmt.zathura', 'okular','DesktopEditors', 'evince']
      d[group_names[2]] = ['Alacritty'] 
      d[group_names[3]] = ['thunar'] 
      d[group_names[4]] = ['joplin'] 
-     d[group_names[5]] = ['virt-manager', 'VirtualBox Manager']
+     d[group_names[5]] = ['virt-manager', 'VirtualBox Manager','kdenlive']
      d[group_names[6]] = ['vscodium','rstudio', 'Fritzing','notepadqq-bin']
      d[group_names[7]] = ['caprine', 'signal']
      d[group_names[8]]=['superproductivity']
@@ -499,21 +500,3 @@ auto_fullscreen = True
 focus_on_window_activation = "smart"
 #wmname = "LG3D"
 wmname = "qql"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
