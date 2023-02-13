@@ -67,7 +67,6 @@ colours = [
     '#90d0e8',
     #'#00ffff'
     '#000000ff'
-    
     ]
 
 mod = "mod4"
@@ -106,7 +105,7 @@ keys = [
     Key([mod], "b", lazy.spawn("brave")),
     Key([mod], "t", lazy.spawn(terminal)),
     #Key([mod], "t", lazy.spawn(terminal)),
-    Key([mod], "Return", lazy.spawn('urxvt'), desc="Launch terminal"),
+    #Key([mod], "Return", lazy.spawn('urxvt'), desc="Launch terminal"),
     Key([mod], "e", lazy.spawn("thunar")),
     #Key([mod], "z", lazy.spawn("urxvt -e ranger")),
     #Key([mod], "e", qtile.cmd_spawn("urxvt -e ranger"),
@@ -119,11 +118,10 @@ keys = [
     Key([mod, "shift"], "s",lazy.spawn("flameshot gui")),
     Key([mod, "shift"], "x",lazy.spawn('betterlockscreen -l blur')),
 
-
     # Toggle between different layouts as defined below
     # Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
 
-    # #Key([mod], "n", lazy.layout.normalize()),
+    # Key([mod], "n", lazy.layout.normalize()),
     Key([mod], "space", lazy.next_layout()),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
@@ -192,8 +190,6 @@ keys = [
 
 # TOGGLE FLOATING LAYOUT
     Key([mod, "shift"], "space", lazy.window.toggle_floating()),
-
-    
 ]
 
 #######         mousecallbacks
@@ -296,8 +292,6 @@ layouts = [
 #         #     desc="move focused window to group {}".format(i.name)),
 #     ])
 
-
-
 widget_defaults = dict(
     #font='sans',
     font='UbuntuMono Nerd Font',
@@ -338,7 +332,6 @@ screens = [
                 widget.TextBox(
                          text='\uE0B2',
                 #,                   #text='❰',
-
                 #                   #text='◀',
                 #                   text='🠴',
                          background = colours[1],
@@ -450,7 +443,6 @@ mouse = [
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 # ASSIGN APPLICATIONS TO A SPECIFIC GROUPNAME
-# BEGIN
 
 #######################################################
 ############### assgin apps to groups ##################

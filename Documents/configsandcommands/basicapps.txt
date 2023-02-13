@@ -1,9 +1,0 @@
-ranger
-rofi
-arandr
-alacritty
-flameshot
-neovim
-zathura
-picom
-speedcrunch

@@ -5,22 +5,16 @@
 #  \__, |\__, |_|
 #     |_|   |_|  
 
-
-
-
-# skrrrr
-
 #code /home/qql/.bashrc
 #to run.     ~/.bashrc
+#
 alias code='codium'
 alias qconf='nvim /home/qql/.config/qtile/config.py'
 alias bapconf='nvim /home/qql/.bashrc-personal'
 alias baconf='nvim ~/.bashrc'
 alias figtime='watch -n1 "date '+%D%n%T'|figlet -k"'
-alias clc='clear'
 alias nitro='nitrogen --restore'
-alias auconf='code /home/qql/.config/qtile/scripts/autostart.sh'
-#alias perosnal1 ='cp -Rf /persona/1/* ~'
+alias auconf='code /home/qql/.config/qtile/scripts/autostart.sh' 
 alias cale='calcurse'
 alias inzy='nvim ~/Documents/sql/inzynierka/inzynierka.md'
 alias master='zathura ~/Documents/ebookss/mastery-by-robert-greene.pdf'
@@ -30,12 +24,9 @@ alias cdinz='cd ~/Documents/sql/inzynierka'
 alias tuto='cd ~/Documents/tutorials'
 alias lock='betterlockscreen -u ~/Pictures/dracula_mac_wallpaper.png -u ~/Pictures/wallhaven-r71kx7.jpg'
 alias slock='betterlockscreen -u ~/Pictures/dracula_mac_wallpaper.png'
-#alias slock='betterlockscreen -u ~/Pictures/dracula_mac.wallpaper.png 
-#alias joplin='/home/qql/apps/joplin/joplin.sh'
-## to nie alias, ale trzeba to potestowac i wrzucic do autostartu, bo kozak
 alias fcurs='xset r rate 250 65'
 alias scurs='xset r rate 250 35'
-alias nconf='nvim ~/.config/nvim/init.vim'
+alias nconf='nvim ~/.config/nvim/init.lua'
 alias susp='systemctl suspend'
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
@@ -43,8 +34,6 @@ alias ac='arduino-cli'
 alias accom='ac compile -b arduino:avr:uno'
 alias acupl='arduino-cli upload -b arduino:avr:uno -p /dev/ttyACM0'
 alias pacz='cat /dev/ttyACM0'
-alias book='zathura /home/qql/Documents/ebookss/1584853178_the-art-of-seduction-robert-greene.pdf'
-alias cddev='cd /home/qql/Documents/tutorials/golang/freecodecamp'
 alias sl='ls'
 alias token='sudo cat /home/qql/Documents/configsandcommands/tokengit.txt'
 alias tconf='nvim ~/.config/tmux/tmux.conf'
@@ -53,5 +42,5 @@ alias oprobr='nvim ~/Documents/sql/inzynierka/obrona/PYTANIA-OBRONA.md'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias svn="svn --config-dir \"$XDG_CONFIG_HOME\"/subversion"
 alias cdeb="cd ~/Documents/ebookss"
-#alias prezka='DesktopEditors ~/Documents/sql/inzynierka/obrona/KarolKulis297116.pptx' nie dzila, tutaj akurat nazwa zla powinno byc onlyoffice-desktopeditors ale i tak to by nic nie dalo bo to jakos przepakowane jest z deb na archa niezbyt dobrze
-
+alias vi='nvim'
+alias vim='nvim'
