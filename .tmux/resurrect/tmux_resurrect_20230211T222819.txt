@@ -1,0 +1,22 @@
+pane	0	0	0	:-	0	qql@qql:~/Downloads	:/home/qql/Downloads	1	nvim	:nvim /home/qql/.config/nvim/init.lua
+pane	0	1	0	:	0	qql@qql:~/Documents/ebookss/code	:/home/qql/Documents/ebookss/code	1	zathura	:zathura think-python-2nd.pdf
+pane	0	2	0	:	0	qql@qql:~	:/home/qql	1	bash	:
+pane	0	3	0	:	0	qql@qql:~	:/home/qql	1	bash	:
+pane	0	4	0	:	0	qql@qql:~/Documents/ebookss/code	:/home/qql/Documents/ebookss/code	1	bash	:
+pane	0	5	0	:	0	qql@qql:~	:/home/qql	1	htop	:htop
+pane	0	6	0	:	0	qql@qql:~/Documents/tutorials/python	:/home/qql/Documents/tutorials/python	1	bash	:
+pane	0	7	1	:*	0	qql@qql:~/Documents/tutorials/python/thinkpython	:/home/qql/Documents/tutorials/python/thinkpython	1	nvim	:nvim
+pane	0	7	1	:*	1	qql@qql:~/Documents/tutorials/python/thinkpython	:/home/qql/Documents/tutorials/python/thinkpython	0	python3	:python3 literki.py
+pane	0	8	0	:	0	qql@qql:~/Documents/notes/notes	:/home/qql/Documents/notes/notes	1	bash	:
+pane	1	0	1	:*	0	qql@qql:~	:/home/qql	1	bash	:
+window	0	0	:bash	0	:-	c2fe,185x45,0,0,1	off
+window	0	1	:books	0	:	c2ff,185x45,0,0,2	off
+window	0	2	:bash	0	:	c300,185x45,0,0,3	:
+window	0	3	:bash	0	:	c301,185x45,0,0,4	:
+window	0	4	:bash	0	:	c302,185x45,0,0,5	off
+window	0	5	:htop	0	:	c303,185x45,0,0,6	:
+window	0	6	:bash	0	:	c304,185x45,0,0,7	off
+window	0	7	:code	1	:*	8a96,92x45,0,0[92x36,0,0,8,92x8,0,37,9]	off
+window	0	8	:notes	0	:	61af,185x45,0,0,10	off
+window	1	0	:bash	1	:*	61b0,185x45,0,0,11	:
+state	0	1

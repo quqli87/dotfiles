@@ -462,7 +462,7 @@ def assign_app_group(client):
      d[group_names[5]] = ['virt-manager', 'VirtualBox Manager','kdenlive']
      d[group_names[6]] = ['vscodium','rstudio', 'Fritzing','notepadqq-bin']
      d[group_names[7]] = ['caprine', 'signal']
-     d[group_names[8]]=['superproductivity']
+     d[group_names[8]]=['superproductivity','keepassxc']
      d[group_names[9]] = ['com.rafaelmardojai.Blanket', 'crx_cinhimbnkkaeohfgghhklpknlkffjgod','crx_eikjhbkpemdappjfcmdeeeamdpkgabmk','deadbeef','pavucontrol','blueberry.py']
      wm_class = client.window.get_wm_class()[0]
 
