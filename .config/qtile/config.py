@@ -1,9 +1,11 @@
-#                     _   _   _                           _           
-# _ __   ___  _ __ __| | | |_| |__   ___ _ __ ___   ___  | |__  _   _ 
-#| '_ \ / _ \| '__/ _` | | __| '_ \ / _ \ '_ ` _ \ / _ \ | '_ \| | | |
-#| | | | (_) | | | (_| | | |_| | | |  __/ | | | | |  __/ | |_) | |_| |
-#|_| |_|\___/|_|  \__,_|  \__|_| |_|\___|_| |_| |_|\___| |_.__/ \__, |
-#                                                               |___/ 
+#___  _ __ __ _ _ __   __ _  ___  | |_| |__   ___ _ __ ___   ___
+# / _ \| '__/ _` | '_ \ / _` |/ _ \ | __| '_ \ / _ \ '_ ` _ \ / _ \
+#| (_) | | | (_| | | | | (_| |  __/ | |_| | | |  __/ | | | | |  __/
+# \___/|_|  \__,_|_| |_|\__, |\___|  \__|_| |_|\___|_| |_| |_|\___|
+#                       |___/
+#
+##                                                               |___/ 
+
 #             _ 
 #  __ _  __ _| |
 # / _` |/ _` | |
@@ -58,15 +60,17 @@ from libqtile.utils import describe_attributes
 from libqtile.widget import Spacer
               
 colours = [
-    '#ffffff',
+    '#bcbcbc',
     '#000000',
     '#ddffff',
     #'#5F5FAF',
-    '#303343',
+    '#FEA159',
+    #'#303343',
     '#0000ff',
     '#90d0e8',
     #'#00ffff'
-    '#000000ff'
+    '#000000ff',
+    '#ffffff'
     ]
 
 mod = "mod4"
@@ -96,8 +100,6 @@ def start_once():
     subprocess.call([home + '/.config/qtile/scripts/autostart.sh'])
 
 keys = [
-
-
     #hotkeys keybindings keybinds shortcuts
     #Key([mod], "d", lazy.spawn("/usr/bin/dmenu_run")),
     #Key([mod], "d", lazy.spawn("dmenu_run")),
@@ -252,14 +254,14 @@ def init_layout_theme():
     return {"margin":6,
             "border_width":1,
             "border_focus": colours[3],
-            "border_normal": colours[5]
+            "border_normal": colours[0]
             }
 
 layout_theme = init_layout_theme()
 layouts = [
     layout.Max(**layout_theme),
-    layout.MonadTall(margin=6, border_width=1, border_focus=colours[5], border_normal=colours[3]),
-    layout.MonadWide(margin=6, border_width=1, border_focus=colours[5], border_normal=colours[3]),
+    layout.MonadTall(margin=6, border_width=1, border_focus=colours[3], border_normal=colours[1]),
+    layout.MonadWide(margin=6, border_width=1, border_focus=colours[3], border_normal=colours[1]),
     layout.Matrix(**layout_theme),
     # layout.Bsp(**layout_theme),
     # layout.Floating(**layout_theme),
@@ -308,11 +310,11 @@ screens = [
             [
                 #widget.CurrentLayout(),
                 widget.GroupBox(font='scientifica', highlight_method='line',
-                     highlight_color=[colours[1], colours[5]],
+                     highlight_color=[colours[1], colours[3]],
                      margin_y =3,
                      margin_x =2, 
                      foreground=colours[1],
-                     active=colours[5],
+                     active=colours[3],
                      background=colours[1],
                                 ),
                 widget.Prompt(),
@@ -326,7 +328,7 @@ screens = [
                 ),
                 widget.CheckUpdates(
                     colour_no_updates =colours[0],
-                    colour_have_updates = colours[5],
+                    colour_have_updates = colours[3],
                     update_interval = 300
                        ),
                 widget.TextBox(
@@ -348,8 +350,8 @@ screens = [
                 #             fontsize=13
                 #             ),
                 widget.Systray(
+                         foreground = colours[6],
                          background = colours[3],
-                         foreground = colours[5],
                          icon_size=20,
                          padding = 0),
                 widget.TextBox(
@@ -358,7 +360,7 @@ screens = [
                 #                   #text='◀',
                 #                   text='🠴',
                          background = colours[3],
-                         foreground = colours[5],
+                         foreground = colours[1],
                 #                   margin_y=19,
                          padding=0,
                          fontsize=17
@@ -366,14 +368,15 @@ screens = [
  
                 widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
                         padding=0,
-                        background=colours[5]),
+                        background=colours[1]),
                 #foreground = colours[1]),
                 widget.TextBox(
                          text='\uE0B2',
-                         background = colours[5],
+                         background = colours[1],
                          foreground = colours[3],
                          fontsize=17),
                 widget.Clock(format='%Y-%m-%d %a %H:%M:%S',
+                         foreground = colours[6],
                          background = colours[3]),
             ],
             22,
@@ -384,11 +387,11 @@ screens = [
             [
                 #widget.CurrentLayout(),
                 widget.GroupBox(font='scientifica', highlight_method='line',
-                     highlight_color=[colours[1], colours[5]],
+                     highlight_color=[colours[1], colours[3]],
                      margin_y =3,
                      margin_x =3, 
-                     active=colours[5],
-                     foreground=colours[2],
+                     active=colours[3],
+                     foreground=colours[3],
                      #background="#ff0000.0", opacity=1
                      background=colours[6],
                                ),
@@ -399,32 +402,55 @@ screens = [
                 ),
                 widget.CheckUpdates(
                     colour_no_updates =colours[0],
-                    colour_have_updates = colours[5],
+                    colour_have_updates = colours[3],
                     update_interval = 300
                        ),
-                widget.TextBox(
-                           text='\uE0B2',
-                                   #text='❰',
-                                   #text='◀',
-                                   #text='🠴',
-                                   foreground = colours[5],
-                                   margin_y=19,
-                                   padding=0,
-                                   fontsize=17
-                                   ),
+                #widget.TextBox(
+                #           text='\uE0B2',
+                #                   #text='❰',
+                #                   #text='◀',
+                #                   #text='🠴',
+                #                   foreground = colours[5],
+                #                   margin_y=19,
+                #                   padding=0,
+                #                   fontsize=17
+                #                   ),
  
+                widget.TextBox(
+                         text='\uE0B2',
+                #                   #text='❰',
+                #                   #text='◀',
+                #                   text='🠴',
+                         background = colours[1],
+                         foreground = colours[3],
+                #                   margin_y=19,
+                         padding=0,
+                         fontsize=17
+                                   ),
 
                 widget.Battery(format='{percent:2.0%} ', notify_below=0.3,
                         padding=0,
-                        background=colours[5],
-                        foreground = colours[3]),
+                        background=colours[3],
+                        foreground = colours[1]),
+                #widget.TextBox(
+                #            text='\uE0B2',
+                #            background = colours[5],
+                #            foreground = colours[3],
+                #            fontsize=17),
                 widget.TextBox(
-                            text='\uE0B2',
-                            background = colours[5],
-                            foreground = colours[3],
-                            fontsize=17),
+                         text='\uE0B2',
+                #                   #text='❰',
+                #                   #text='◀',
+                #                   text='🠴',
+                         background = colours[3],
+                         foreground = colours[1],
+                #                   margin_y=19,
+                         padding=0,
+                         fontsize=17
+                                   ),
                 widget.Clock(format='%Y-%m-%d %a %H:%M:%S',
-                    background = colours[3]),
+                    foreground = colours[3],
+                    background = colours[6]),
             ],
             22,
         ),
@@ -449,28 +475,28 @@ dgroups_app_rules = []  # type: List
 ########################################################
 @hook.subscribe.client_new
 def assign_app_group(client):
-     d = {}
-     #####################################################################################
-     ### Use xprop fo find  the value of WM_CLASS(STRING) -> First field is sufficient ###
-     #####################################################################################
-     
-     d[group_names[0]] = ['brave-browser', 'Navigator']
-     d[group_names[1]] = ['fluent-reader', 'org.pwmt.zathura', 'okular','DesktopEditors', 'evince']
-     d[group_names[2]] = ['Alacritty'] 
-     d[group_names[3]] = ['thunar'] 
-     d[group_names[4]] = ['joplin'] 
-     d[group_names[5]] = ['virt-manager', 'VirtualBox Manager','kdenlive']
-     d[group_names[6]] = ['vscodium','rstudio', 'Fritzing','notepadqq-bin']
-     d[group_names[7]] = ['caprine', 'signal']
-     d[group_names[8]]=['superproductivity','keepassxc']
-     d[group_names[9]] = ['com.rafaelmardojai.Blanket', 'crx_cinhimbnkkaeohfgghhklpknlkffjgod','crx_eikjhbkpemdappjfcmdeeeamdpkgabmk','deadbeef','pavucontrol','blueberry.py']
-     wm_class = client.window.get_wm_class()[0]
+    d = {}
+    #####################################################################################
+    ### Use xprop fo find  the value of WM_CLASS(STRING) -> First field is sufficient ###
+    #####################################################################################
+    
+    d[group_names[0]] = ['brave-browser', 'Navigator']
+    d[group_names[1]] = ['fluent-reader', 'org.pwmt.zathura', 'okular','DesktopEditors', 'evince']
+    d[group_names[2]] = ['Alacritty'] 
+    d[group_names[3]] = ['thunar'] 
+    d[group_names[4]] = ['joplin', 'keepassxc'] 
+    d[group_names[5]] = ['virt-manager', 'VirtualBox Manager','kdenlive']
+    d[group_names[6]] = ['vscodium','rstudio', 'Fritzing','notepadqq-bin']
+    d[group_names[7]] = ['caprine', 'signal', 'discord']
+    d[group_names[8]]= ['superproductivity']
+    d[group_names[9]] = ['com.rafaelmardojai.Blanket', 'crx_cinhimbnkkaeohfgghhklpknlkffjgod','crx_eikjhbkpemdappjfcmdeeeamdpkgabmk','deadbeef','pavucontrol','blueberry.py']
+    wm_class = client.window.get_wm_class()[0]
 
-     for i in range(len(d)):
-         if wm_class in list(d.values())[i]:
-             group = list(d.keys())[i]
-             client.togroup(group)
-             client.group.cmd_toscreen(toggle=False)
+    for i in range(len(d)):
+        if wm_class in list(d.values())[i]:
+            group = list(d.keys())[i]
+            client.togroup(group)
+            client.group.cmd_toscreen(toggle=False)
 
 # ND
 # ASSIGN APPLICATIONS TO A SPECIFIC GROUPNAME
