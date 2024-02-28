@@ -1,9 +1,0 @@
-call plug#begin('~/.config/nvim/vim-plug')
-plug 'morhetz/gruvbox'
-plug 'jremmen/vim-ripgrep'
-plug 'tpope/vim-fugitive'
-plug 'git@githu.com:Valloric/YourCompleteMe.git'
-plug 'nvim-lua/plenary.nvim'
-plug 'nvim-telescope/telescope.nvim'
-plug 'nvim-telescope/telescope-fzy-native.nvim'
-call plug#end()
