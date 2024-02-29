@@ -12,7 +12,18 @@ function run {
 #run $HOME/.config/qtile/scripts/set-screen-resolution-in-virtualbox.sh
 
 #Find out your monitor name with xrandr or arandr (save and you get this line)
-xrandr --output eDP1 --primary --mode 1366x768 --pos 157x1050 --rotate normal --output DP1 --off --output HDMI1 --off --output HDMI2 --mode 1680x1050 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+#xrandr --output eDP1 --primary --mode 1366x768 --pos 1680x0 --rotate normal --output DP1 --off --output HDMI1 --off --output HDMI2 --mode 1680x1050 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+#
+#xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output DP1 --off --output HDMI1 --off --output HDMI2 --mode 1680x1050 --pos 1366x0 --rotate normal --output VIRTUAL1 --off
+#xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output DP1 --off --output HDMI1 --off --output HDMI2 --mode 1680x1050 --pos 1366x0 --rotate normal --output VIRTUAL1 --off
+xrandr --output eDP1 --primary --mode 1366x768 --pos 0x0 --rotate normal --output DP1 --off --output HDMI1 --off --output HDMI2 --mode 3840x2160 --pos 1366x0 --rotate normal --output VIRTUAL1 --off
+
+
+
+
+#old one single laptop
+#xrandr --output eDP1 --primary --mode 1366x768 --pos 157x1050 --rotate normal --output DP1 --off --output HDMI1 --off --output HDMI2 --mode 1680x1050 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+
 #xrandr --output DP1 --mode 1440x900 --right-of eDP1 --rate 74.98
 
 #xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal

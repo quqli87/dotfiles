@@ -74,7 +74,7 @@ colours = [
     ]
 
 mod = "mod4"
-#mod1 = "control"
+#mod1 = "mod1"
 #terminal = guess_terminal()
 #terminal = 'urxvt'
 terminal = 'alacritty'
@@ -480,7 +480,7 @@ def assign_app_group(client):
     ### Use xprop fo find  the value of WM_CLASS(STRING) -> First field is sufficient ###
     #####################################################################################
     
-    d[group_names[0]] = ['brave-browser', 'Navigator']
+    d[group_names[0]] = ['brave-browser', 'Navigator', 'chromium-browser']
     d[group_names[1]] = ['fluent-reader', 'org.pwmt.zathura', 'okular','DesktopEditors', 'evince']
     d[group_names[2]] = ['Alacritty'] 
     d[group_names[3]] = ['thunar'] 

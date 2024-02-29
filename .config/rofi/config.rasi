@@ -164,4 +164,7 @@ columns: 2;
 //@theme "/usr/share/rofi/themes/Arc-Polo-transparent.rasi"
 //@theme "/home/qql/.config/rofi/themes/dracula.rasi"
 //@theme "/usr/share/rofi/themes/ArcoLinux-Nord.rasi"
-@theme "/home/qql/.config/rofi/themes/nord.rasi"
+//@theme "/home/qql/.config/rofi/themes/nord.rasi"
+//@theme "/usr/share/rofi/themes/Arc-Dark-Casablanca-transparent.rasi"
+//@theme "/usr/share/rofi/themes/Arc-Casablanca.rasi"
+@theme "/usr/share/rofi/themes/Arc-Tacao-transparent.rasi"
