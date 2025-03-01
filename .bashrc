@@ -21,20 +21,24 @@ export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
 export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 
-export GOPATH=$HOME/code/go
-export GOBIN=$HOME/code/go/bin
+#export GOPATH=$HOME/code/go
+#export GOBIN=$HOME/code/go/bin
 export PATH=$PATH:~/.config/nvim/autoload/vim-go
 #export PATH=$PATH:/etc/xdg/nvim/autoload/vim-go
 export PATH=$PATH:/home/qql/Documents/configsandcommands
 
-export PATH=$PATH:/usr/local/go/bin
-export GOROOT="/usr/local/go"
+#export PATH=$PATH:/usr/local/go/bin
+#export GOROOT="/usr/local/go"
 #export GOROOT="/usr/local/go"
 #go env -w GOBIN=/home/qql/go/bin
-export PATH=$PATH:$GOBIN
-export PATH=$PATH:$GOPATH
+#export PATH=$PATH:$GOBIN
+#export PATH=$PATH:$GOPATH
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+
+# tmuxifer
+export PATH=$PATH:~/.config/tmux/plugins/tmuxifier/bin
 
 export HISTCONTROL=ignoreboth:erasedups
 
@@ -123,9 +127,9 @@ alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias update-fc='sudo fc-cache -fv'
 
 #copy/paste all content of /etc/skel over to home folder - backup of config created - beware
-alias skel='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~'
+#alias skel='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-$(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/skel/* ~'
 #backup contents of /etc/skel to hidden backup folder in home/user
-alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
+#alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
 #copy bashrc-latest over on bashrc - cb= copy bashrc
 alias cb='sudo cp /etc/skel/.bashrc ~/.bashrc && source ~/.bashrc'
@@ -174,17 +178,8 @@ shopt -s dotglob
 shopt -s histappend # do not overwrite history
 shopt -s expand_aliases # expand aliases
 
-#youtube-dl
-alias yta-aac="youtube-dl --extract-audio --audio-format aac "
-alias yta-best="youtube-dl --extract-audio --audio-format best "
-alias yta-flac="youtube-dl --extract-audio --audio-format flac "
-alias yta-m4a="youtube-dl --extract-audio --audio-format m4a "
-alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
-alias yta-opus="youtube-dl --extract-audio --audio-format opus "
-alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
-alias yta-wav="youtube-dl --extract-audio --audio-format wav "
+#youtube-dl decommisioned - to be replaced by something
 
-alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 ##moje qql
 alias yta-vid='youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4''
 
@@ -301,6 +296,7 @@ alias personal='cp -Rf /personal/* ~'
 #in there. They will not be overwritten by skel.
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
+[[ -f ~/.bashrc-personal-private ]] && . ~/.bashrc-personal-private
 
 # reporting tools - install when not installed
 # install neofetch
