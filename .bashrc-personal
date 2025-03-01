@@ -23,12 +23,13 @@ alias vimconf='sudo nvim /etc/xdg/nvim/init.vim'
 alias cdinz='cd ~/Documents/sql/inzynierka'
 alias tuto='cd ~/Documents/tutorials'
 alias block='betterlockscreen -u ~/Pictures/zachodzik.png'
-alias lock='betterlockscreen -u ~/Pictures/zachodzik.png -u ~/Pictures/zachodzik.png'
+alias lock='betterlockscreen -u ~/Pictures/zachodzik.png -u ~/Pictures/zachodzik.png' 
 alias slock='betterlockscreen -u ~/Pictures/zachodzik.png'
 alias fcurs='xset r rate 250 65'
 alias scurs='xset r rate 250 35'
 alias nconf='nvim ~/.config/nvim/init.lua'
 alias susp='systemctl suspend'
+
 # the terminal rickroll
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias ac='arduino-cli' 
@@ -56,16 +57,26 @@ alias ssingle='sh /home/qql/.screenlayout/single.sh'
 alias lhor='sh /home/qql/.screenlayout/aleftright.sh'
 
 #sql
-alias mag='cd ~/Documents/sql/mag/polsem5'
+alias mag='cd ~/Documents/sql/mag/polsem6'
 alias mpsi='cd ~/Documents/sql/mag/polsem5/MPSI'
+alias tibuz='cd ~/Documents/sql/mag/polsem6/TIBUZ/'
+alias tiwuz='cd ~/Documents/sql/mag/polsem6/TIWUZ/'
 alias mpbuz='cd ~/Documents/sql/mag/polsem5/MPBUZ'
+alias dyplom='cd ~/Documents/sql/mag/dyplomowanie/'
 
 alias bpapi='sh /home/qql/.screenlayout/bigHorPapi.sh && nitro'
 alias papi='sh /home/qql/.screenlayout/bigsinglePapi.sh && nitro'
 
 #git
-ga='git add'
-gcm='git commit -m'
-gstat='git status'
-gl='git log'
-#gp= 
+alias ga='git add'
+alias gc='git commit -m'
+alias gstat='git status'
+alias gl='git log'
+alias gs='git status'
+alias gp='git push'
+alias gpull='git pull'
+alias gd='git diff'
+
+alias tmx='tmuxifier'
+#prompt
+eval "$(starship init bash)"
