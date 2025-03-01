@@ -21,21 +21,10 @@ export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
 export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 
-#export GOPATH=$HOME/code/go
-#export GOBIN=$HOME/code/go/bin
-export PATH=$PATH:~/.config/nvim/autoload/vim-go
-#export PATH=$PATH:/etc/xdg/nvim/autoload/vim-go
 export PATH=$PATH:/home/qql/Documents/configsandcommands
 
-#export PATH=$PATH:/usr/local/go/bin
-#export GOROOT="/usr/local/go"
-#export GOROOT="/usr/local/go"
-#go env -w GOBIN=/home/qql/go/bin
-#export PATH=$PATH:$GOBIN
-#export PATH=$PATH:$GOPATH
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
 
 # tmuxifer
 export PATH=$PATH:~/.config/tmux/plugins/tmuxifier/bin
@@ -81,9 +70,6 @@ alias upal="paru -Syu --noconfirm"
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-
-#readable output
-alias df='df -h'
 
 #pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"
@@ -139,10 +125,6 @@ alias cb='sudo cp /etc/skel/.bashrc ~/.bashrc && source ~/.bashrc'
 #switch between bash and zsh
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-
-#switch between lightdm and sddm
-alias tolightdm="sudo pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings --noconfirm --needed ; sudo systemctl enable lightdm.service -f ; echo 'Lightm is active - reboot now'"
-alias tosddm="sudo pacman -S sddm --noconfirm --needed ; sudo systemctl enable sddm.service -f ; echo 'Sddm is active - reboot now'"
 
 #quickly kill conkies
 alias kc='killall conky'
@@ -274,18 +256,6 @@ ex ()
   fi
 }
 
-#arcolinux applications
-alias att="arcolinux-tweak-tool"
-alias adt="arcolinux-desktop-trasher"
-alias abl="arcolinux-betterlockscreen"
-alias agm="arcolinux-get-mirrors"
-alias amr="arcolinux-mirrorlist-rank-info"
-alias aom="arcolinux-osbeck-as-mirror"
-alias ars="arcolinux-reflector-simple"
-alias atm="arcolinux-tellme"
-alias avs="arcolinux-vbox-share"
-alias awa="arcolinux-welcome-app"
-
 #remove
 alias rmgitcache="rm -r ~/.cache/git"
 
@@ -297,27 +267,3 @@ alias personal='cp -Rf /personal/* ~'
 
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 [[ -f ~/.bashrc-personal-private ]] && . ~/.bashrc-personal-private
-
-# reporting tools - install when not installed
-# install neofetch
-#neofetch
-# install screenfetch
-#screenfetch
-# install ufetch-git
-#ufetch
-# install ufetch-arco-git
-#ufetch-arco
-# install arcolinux-paleofetch-git
-#paleofetch
-# install alsi
-#alsi
-# install arcolinux-bin-git - standard on ArcoLinux isos (or sfetch - smaller)
-#hfetch
-# install lolcat
-#sfetch | lolcat
-#sysinfo
-#colorscript random
-#cpufetch
-#sysinfo-retro
-#pfetch
-#fetch
